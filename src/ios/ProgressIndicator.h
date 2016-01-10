@@ -21,6 +21,7 @@
 //- (void)showMultiple:(CDVInvokedUrlCommand*)command;
 
 - (void)hide:(CDVInvokedUrlCommand*)command;
+- (void)setProgress:(CDVInvokedUrlCommand*)command;
 
 - (void)progressTask:(NSNumber*)increment;
 
