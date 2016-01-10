@@ -414,7 +414,7 @@
     int progress = [[command.arguments objectAtIndex:0] intValue];
 
     // initialize indicator with options, text, detail
-    self.progressIndicator.progress = progress;
+    self.progressIndicator.progress = (float)(progress/100.0f);
   }
 }
 
