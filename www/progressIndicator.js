@@ -64,12 +64,10 @@ var ProgressIndicator = {
     cordova.exec(null, null, "ProgressIndicator", "showDeterminateBar", [dim, timeout]);
   },
 
-  showBarWithLabel: function (dim, timeout, label) {
+  showBarWithLabel: function (dim, label, title) {
     dim = dim || false;
-    timeout = timeout || 50000;
-    label = label || "Please wait...";
-
-    cordova.exec(null, null, "ProgressIndicator", "showDeterminateBarWithLabel", [dim, timeout, label]);
+ 
+    cordova.exec(null, null, "ProgressIndicator", "showDeterminateBarWithLabel", [dim, label, title]);
   },
 
 
@@ -88,9 +86,12 @@ var ProgressIndicator = {
     cordova.exec(null, null, "ProgressIndicator", "showText", [dim, label, position]);
   },
 
-
   hide: function () {
     cordova.exec(null, null, "ProgressIndicator", "hide", []);
+  },
+
+  setProgress: function(progress) {
+    cordova.exec(null, null, "ProgressIndicator", "setProgress", [progress]);
   }
 };
 
